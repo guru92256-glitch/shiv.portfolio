@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgEd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0e14"/>
+      <stop offset="100%" stop-color="#040508"/>
+    </linearGradient>
+    <linearGradient id="neonPink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="100%" stop-color="#7928ca"/>
+    </linearGradient>
+    <linearGradient id="audioWave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#00ff88"/>
+      <stop offset="100%" stop-color="#ffaa00"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgEd)"/>
+
+  <!-- NLE / Video Editing Timeline UI Mockup -->
+  <!-- Top Bar: Playhead & Timecode -->
+  <rect x="40" y="30" width="720" height="40" rx="6" fill="#131824" stroke="#252f44" stroke-width="1"/>
+  <circle cx="60" cy="50" r="5" fill="#ff4444"/>
+  <circle cx="75" cy="50" r="5" fill="#ffbb00"/>
+  <circle cx="90" cy="50" r="5" fill="#00cc66"/>
+  <text x="120" y="55" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">00:02:48:14</text>
+  <text x="730" y="55" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="end">4K UHD // 60 FPS // DCI-P3 LOG</text>
+
+  <!-- Video Preview Window Area -->
+  <rect x="40" y="85" width="450" height="230" rx="8" fill="#080a0f" stroke="#232d3f" stroke-width="1.5"/>
+  
+  <!-- Stylized cinematic shot of supercar in motion blur -->
+  <path d="M120 220 Q240 150 420 180 L440 240 L100 240 Z" fill="#162235" opacity="0.6"/>
+  <!-- Light trails (Long exposure) -->
+  <path d="M60 210 Q220 190 380 200" stroke="#ff0055" stroke-width="4" fill="none" opacity="0.8"/>
+  <path d="M60 225 Q240 215 420 220" stroke="#ff9900" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M140 170 Q300 160 450 190" stroke="#00f0ff" stroke-width="3" fill="none" opacity="0.8"/>
+  <circle cx="265" cy="200" r="28" fill="#ffffff" opacity="0.1"/>
+  <polygon points="258,188 278,200 258,212" fill="#00f0ff"/>
+
+  <!-- Right Panel: Color Wheels / Audio Scopes -->
+  <rect x="510" y="85" width="250" height="230" rx="8" fill="#111622" stroke="#232d3f" stroke-width="1.5"/>
+  <text x="530" y="112" fill="#8fa0b5" font-family="'JetBrains Mono', monospace" font-size="10">COLOR GRADING LUT: CINEMA TEAL &amp; ORANGE</text>
+  
+  <!-- Waveform / Histogram -->
+  <g transform="translate(530, 130)">
+    <rect width="210" height="70" fill="#0a0d14" rx="4"/>
+    <path d="M0 60 Q20 10 40 40 T80 20 T120 50 T160 15 T210 55" stroke="#00f0ff" stroke-width="1.5" fill="none"/>
+    <path d="M0 65 Q25 25 50 45 T90 30 T130 55 T170 25 T210 60" stroke="#ff5500" stroke-width="1.5" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Timeline Tracks (Video 1, Video 2, Audio 1, SFX) -->
+  <g transform="translate(40, 330)">
+    <!-- Track 1: Video -->
+    <rect x="0" y="0" width="720" height="32" rx="4" fill="#131d2e" stroke="#1f2c42"/>
+    <text x="15" y="21" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="10">V1 [A-ROLL]</text>
+    <rect x="120" y="4" width="180" height="24" rx="3" fill="#0070f3" opacity="0.7"/>
+    <rect x="310" y="4" width="210" height="24" rx="3" fill="#00a8ff" opacity="0.7"/>
+    <rect x="530" y="4" width="170" height="24" rx="3" fill="#0070f3" opacity="0.7"/>
+
+    <!-- Track 2: B-Roll / Effects -->
+    <rect x="0" y="38" width="720" height="32" rx="4" fill="#171226" stroke="#271d3d"/>
+    <text x="15" y="59" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10">V2 [FX / SPEED RAMP]</text>
+    <rect x="180" y="42" width="120" height="24" rx="3" fill="url(#neonPink)" opacity="0.8"/>
+    <rect x="420" y="42" width="150" height="24" rx="3" fill="url(#neonPink)" opacity="0.8"/>
+
+    <!-- Track 3: Audio Master -->
+    <rect x="0" y="76" width="720" height="32" rx="4" fill="#0f1f1d" stroke="#183631"/>
+    <text x="15" y="97" fill="#2dd4bf" font-family="'JetBrains Mono', monospace" font-size="10">A1 [SOUND DESIGN]</text>
+    <!-- Audio Waveform Peaks -->
+    <g transform="translate(120, 80)">
+      <line x1="10" y1="12" x2="10" y2="20" stroke="#2dd4bf" stroke-width="2"/>
+      <line x1="20" y1="5" x2="20" y2="25" stroke="#2dd4bf" stroke-width="2"/>
+      <line x1="30" y1="2" x2="30" y2="28" stroke="#2dd4bf" stroke-width="2"/>
+      <line x1="40" y1="8" x2="40" y2="22" stroke="#2dd4bf" stroke-width="2"/>
+      <line x1="50" y1="4" x2="50" y2="26" stroke="#2dd4bf" stroke-width="2"/>
+      <line x1="60" y1="1" x2="60" y2="30" stroke="#2dd4bf" stroke-width="2"/>
+      <line x1="70" y1="6" x2="70" y2="24" stroke="#2dd4bf" stroke-width="2"/>
+      <line x1="80" y1="2" x2="80" y2="28" stroke="#2dd4bf" stroke-width="2"/>
+    </g>
+
+    <!-- Playhead Red Line -->
+    <line x1="270" y1="-10" x2="270" y2="115" stroke="#ff2244" stroke-width="2.5"/>
+    <polygon points="262,-10 278,-10 270,0" fill="#ff2244"/>
+  </g>
+
+  <text x="50" y="480" fill="#4b5d78" font-family="'JetBrains Mono', monospace" font-size="10">AFTER EFFECTS // PREMIERE PRO // BEAT SYNCHRONIZATION // SOUND ENGINEERING</text>
+</svg>

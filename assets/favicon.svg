@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#0066ff"/>
+      <stop offset="100%" stop-color="#7928ca"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#8fa0b5"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark Background Hexagon -->
+  <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="#080b12" stroke="url(#grad1)" stroke-width="2.5" />
+  
+  <!-- Outer Gear Teeth -->
+  <circle cx="32" cy="32" r="18" fill="none" stroke="#1e293b" stroke-width="2" stroke-dasharray="3,3" />
+  
+  <!-- Stylized Mechanical Piston / Apex Monogram 'S' -->
+  <path d="M22 23 C22 17, 42 16, 42 24 C42 30, 22 30, 22 38 C22 46, 42 46, 42 39" 
+        fill="none" stroke="url(#grad1)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Glowing Center Pin -->
+  <circle cx="32" cy="32" r="3" fill="#00f0ff" />
+  <circle cx="42" cy="24" r="2" fill="#ffffff" />
+  <circle cx="22" cy="38" r="2" fill="#00f0ff" />
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0070f3"/>
+    </linearGradient>
+    <linearGradient id="glowLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff0055"/>
+      <stop offset="100%" stop-color="#ff7700"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#122035" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="1.5" fill="#00f0ff" opacity="0.3"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.85"/>
+  
+  <!-- Technical Dimension Lines & Coordinate Callouts -->
+  <g stroke="#264264" stroke-width="1" opacity="0.6">
+    <line x1="50" y1="420" x2="750" y2="420" stroke-dasharray="4,4"/>
+    <line x1="50" y1="410" x2="50" y2="430"/>
+    <line x1="750" y1="410" x2="750" y2="430"/>
+    <text x="400" y="440" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle" letter-spacing="2">WHEELBASE: 2,750 mm // OVERALL LENGTH: 4,680 mm</text>
+  </g>
+
+  <!-- Technical Telemetry Badges -->
+  <rect x="50" y="40" width="160" height="30" rx="4" fill="#0d1b2a" stroke="#00f0ff" stroke-width="1" opacity="0.9"/>
+  <text x="60" y="60" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">CAD MODEL // APEX-GT</text>
+  
+  <rect x="610" y="40" width="140" height="30" rx="4" fill="#0d1b2a" stroke="#ff5500" stroke-width="1" opacity="0.9"/>
+  <text x="620" y="60" fill="#ff5500" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">Cd: 0.28 // AERO-V1</text>
+
+  <!-- Aerodynamic Supercar Side Profile Wireframe & Body Contours -->
+  <!-- Wheels -->
+  <!-- Rear Wheel -->
+  <g transform="translate(190, 360)">
+    <circle cx="0" cy="0" r="48" fill="#06090e" stroke="#00f0ff" stroke-width="3"/>
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#2a486c" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <circle cx="0" cy="0" r="26" fill="#0f1926" stroke="#00f0ff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="10" fill="#00f0ff"/>
+    <!-- Rim Spokes -->
+    <line x1="0" y1="-38" x2="0" y2="38" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="-38" y1="0" x2="38" y2="0" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="-27" y1="-27" x2="27" y2="27" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="27" y1="-27" x2="-27" y2="27" stroke="#00f0ff" stroke-width="2"/>
+    <!-- Red Caliper -->
+    <path d="M-12 -28 A28 28 0 0 1 12 -28" stroke="#ff2244" stroke-width="6" fill="none"/>
+  </g>
+
+  <!-- Front Wheel -->
+  <g transform="translate(610, 360)">
+    <circle cx="0" cy="0" r="48" fill="#06090e" stroke="#00f0ff" stroke-width="3"/>
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#2a486c" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <circle cx="0" cy="0" r="26" fill="#0f1926" stroke="#00f0ff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="10" fill="#00f0ff"/>
+    <line x1="0" y1="-38" x2="0" y2="38" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="-38" y1="0" x2="38" y2="0" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="-27" y1="-27" x2="27" y2="27" stroke="#00f0ff" stroke-width="2"/>
+    <line x1="27" y1="-27" x2="-27" y2="27" stroke="#00f0ff" stroke-width="2"/>
+    <path d="M-12 -28 A28 28 0 0 1 12 -28" stroke="#ff2244" stroke-width="6" fill="none"/>
+  </g>
+
+  <!-- Ground Diffuser / Underbody -->
+  <path d="M80 375 L130 375 L140 340 L240 340 L250 375 L550 375 L560 340 L660 340 L670 375 L730 375" 
+        stroke="#1a334d" stroke-width="3" fill="none"/>
+
+  <!-- Sleek Supercar Silhouette -->
+  <path d="M90 350 
+           L110 300 
+           L150 255 
+           L240 250 
+           L330 180 
+           L460 175 
+           L560 230 
+           L670 280 
+           L725 330 
+           L715 360 
+           L675 365 
+           L655 330 
+           L565 330 
+           L545 365 
+           L255 365 
+           L235 330 
+           L145 330 
+           L125 365 
+           Z" 
+        fill="#0d1b2a" fill-opacity="0.6" stroke="url(#neonCyan)" stroke-width="3.5" filter="url(#glow)"/>
+
+  <!-- Cabin Glass & A/B/C Pillars -->
+  <path d="M335 185 L450 182 L535 235 L420 235 Z" 
+        fill="#00f0ff" fill-opacity="0.15" stroke="#00f0ff" stroke-width="2"/>
+
+  <!-- Aerodynamic Hood Scoops & Door Strakes -->
+  <path d="M260 260 Q380 270 510 250" stroke="#00f0ff" stroke-width="1.8" fill="none" stroke-dasharray="8,3"/>
+  <path d="M260 300 Q400 310 520 290" stroke="#00f0ff" stroke-width="1.8" fill="none"/>
+  <path d="M410 240 L380 340" stroke="#264264" stroke-width="2"/>
+
+  <!-- Rear Wing Spoiler with Endplates -->
+  <path d="M85 240 L135 245 L145 255" stroke="#00f0ff" stroke-width="4" fill="none" filter="url(#glow)"/>
+  <line x1="110" y1="245" x2="120" y2="280" stroke="#00f0ff" stroke-width="3"/>
+  <line x1="130" y1="248" x2="138" y2="275" stroke="#00f0ff" stroke-width="3"/>
+
+  <!-- Headlight Beam (Glowing LED) -->
+  <polygon points="700,310 770,300 780,335 690,325" fill="#00f0ff" fill-opacity="0.3" filter="url(#glow)"/>
+  <circle cx="705" cy="318" r="4" fill="#ffffff" filter="url(#glow)"/>
+
+  <!-- CFD Streamlines / Airflow Simulation Curves -->
+  <g stroke="#ff5500" stroke-width="1.5" opacity="0.65" fill="none" stroke-dasharray="12,6">
+    <path d="M40 220 Q200 210 330 160 T560 170 T760 300"/>
+    <path d="M40 250 Q220 240 340 210 T570 230 T760 330"/>
+    <path d="M40 330 Q220 330 350 330 T550 340 T760 360" stroke="#00f0ff"/>
+  </g>
+  
+  <text x="50" y="475" fill="#5a7a9a" font-family="'JetBrains Mono', monospace" font-size="10">SURFACE MODELING // 3D NURBS // SOLIDWORKS &amp; BLENDER // SHIVRAJ SINGH CHOUHAN</text>
+</svg>

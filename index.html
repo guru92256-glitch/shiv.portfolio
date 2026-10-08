@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Shivraj Singh Chouhan - First-Year Mechanical Engineering Student at JECRC University, Jaipur. Specializing in Automobile Modelling, 3D Design, Kinematics, Graphic Design & Video Editing.">
+    <meta name="keywords" content="Shivraj Singh Chouhan, Mechanical Engineering, Automobile Modelling, JECRC University, 3D CAD, Graphic Design, Video Editing, Portfolio">
+    <meta name="author" content="Shivraj Singh Chouhan">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Shivraj Singh Chouhan | Mechanical Engineering & Automobile Portfolio">
+    <meta property="og:description" content="Passionate Mechanical Engineering student at JECRC University. Explore interactive 3D automobile model, engineering kinematics, design, and academic achievements.">
+    <meta property="og:type" content="website">
+
+    <title>Shivraj Singh Chouhan | Mechanical Engineering &amp; Automobile Portfolio</title>
+
+    <!-- Vector Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- Background Interactive Particles & Blueprint CAD Grid -->
+    <canvas id="cad-bg-canvas" aria-hidden="true"></canvas>
+    <div class="blueprint-grid-overlay" aria-hidden="true"></div>
+
+    <!-- ==========================================================================
+         10. STICKY NAVIGATION BAR
+         ========================================================================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand-logo" aria-label="Shivraj Singh Chouhan Home">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">SHIVRAJ SINGH CHOUHAN</span>
+                    <span class="brand-meta">MECHANICAL ENGG // JECRC</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#interests" class="nav-link">Interests</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#car3d" class="nav-link">3D Automobile</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions (Audio Toggle + Mobile Button) -->
+            <div class="nav-actions">
+                <button id="sound-toggle-btn" class="sound-toggle-btn" aria-label="Toggle Futuristic Audio Effects" title="Toggle Mechanical Audio Effects">
+                    <span class="sound-icon">🔇</span>
+                    <span class="sound-text">AUDIO OFF</span>
+                </button>
+
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+             1. HOME / HERO SECTION
+             ========================================================================== -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left Hero Content -->
+                    <div class="hero-content">
+                        <div class="hero-status-badge">
+                            <span class="status-dot-pulse"></span>
+                            <span>AVAILABLE FOR INTERNSHIPS &amp; PROJECTS</span>
+                        </div>
+
+                        <h1 class="hero-name">Shivraj Singh Chouhan</h1>
+
+                        <div class="hero-designation">
+                            First-Year Mechanical Engineering Student
+                        </div>
+
+                        <div class="hero-university">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                            <span>JECRC University, Jaipur, Rajasthan</span>
+                        </div>
+
+                        <p class="hero-intro">
+                            "Passionate Mechanical Engineering student with a strong interest in automobiles, design, editing, technology, and creative problem-solving. I enjoy transforming ideas into practical and visually engaging projects."
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="hero-cta-group">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>View My Projects</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+
+                            <a href="#contact" class="btn btn-secondary">
+                                <span>Contact Me</span>
+                            </a>
+
+                            <a href="#car3d" class="btn btn-outline-orange">
+                                <span>🏎️ Explore 3D Automobile</span>
+                            </a>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="hero-socials">
+                            <!-- LinkedIn Link (Configured directly from user info) -->
+                            <a href="https://www.linkedin.com/in/shivraj-chouhan-718736429?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                               target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+
+                            <!-- Direct Email -->
+                            <a href="mailto:guru92256@gmail.com" class="social-link" title="Email Shivraj Singh Chouhan" aria-label="Email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </a>
+
+                            <!-- Location / University Badge -->
+                            <span class="mono" style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem;">
+                                JAIPUR, RAJASTHAN // INDIA
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual & 3D Interactive Mini Element -->
+                    <div class="hero-visual-card">
+                        <div class="hero-visual-header">
+                            <span class="telemetry-tag">TELEMETRY: ONLINE</span>
+                            <span>SYS.ME // CAD VIEW</span>
+                        </div>
+
+                        <!-- Stylized Engineering Portrait Wrapper -->
+                        <div class="hero-avatar-wrapper">
+                            <img src="assets/images/profile-avatar.svg" alt="Shivraj Singh Chouhan Engineering Profile Portrait" class="hero-avatar-img">
+                        </div>
+
+                        <!-- 3D Mini Interactive Car Preview in Hero -->
+                        <div class="hero-car-preview-box" title="Drag to inspect 3D automobile teaser">
+                            <div id="hero-car-viewport"></div>
+                            <div class="hero-car-label">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6z"/></svg>
+                                <span>3D SUPERCAR MODEL // DRAG TO ROTATE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             2. ABOUT ME SECTION
+             ========================================================================== -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">ENGINEERING PROFILE</span>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Bridging rigorous mechanical engineering principles with digital design and high-octane automotive dynamics.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Bio Statement Card -->
+                    <div class="about-bio-card">
+                        <p class="about-statement">
+                            "My name is Shivraj Singh Chouhan. I am currently pursuing my first year of Mechanical Engineering at JECRC University, Jaipur, Rajasthan. I am passionate about automobiles, engineering, graphic design, editing, modelling and athletics. I enjoy learning new technologies and developing creative projects that combine engineering and design."
+                        </p>
+
+                        <!-- Engineering Metrics Grid -->
+                        <div class="about-specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-label">Academic Program</div>
+                                <div class="spec-val">B.Tech Mechanical Engg</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Institution</div>
+                                <div class="spec-val">JECRC University, Jaipur</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Core Academic Performance</div>
+                                <div class="spec-val text-gradient-cyan">9.5 CGPA (First Year)</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Hometown / Base</div>
+                                <div class="spec-val">Jaipur / Jodhpur, Rajasthan</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Mechanical Gear Train Widget -->
+                    <div class="gear-simulator-card">
+                        <div class="gear-simulator-header">
+                            <span class="gear-simulator-title">⚙️ KINEMATIC GEAR TRAIN SIMULATOR</span>
+                            <span class="mono" id="gear-rpm-value" style="color: var(--accent-orange); font-size: 0.75rem;">60 RPM</span>
+                        </div>
+
+                        <div class="gear-canvas-wrap">
+                            <canvas id="gear-canvas"></canvas>
+                        </div>
+
+                        <div class="gear-controls">
+                            <span>Adjust Pinion Speed:</span>
+                            <div class="gear-slider-wrap">
+                                <input type="range" id="gear-rpm-slider" min="0.2" max="3.0" step="0.1" value="1.0" aria-label="Adjust Gear Speed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             3. ACADEMIC / EDUCATION SECTION
+             ========================================================================== -->
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">ACADEMIC JOURNEY</span>
+                    <h2 class="section-title">Education &amp; Credentials</h2>
+                    <p class="section-subtitle">A proven track record of academic distinction, engineering fundamentals, and disciplined problem-solving.</p>
+                </div>
+
+                <div class="education-timeline">
+                    <!-- Item 1: B.Tech Mechanical Engineering (Current) -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="degree-title">B.Tech in Mechanical Engineering</h3>
+                                    <div class="institution-name">JECRC University, Jaipur, Rajasthan</div>
+                                    <div class="mono" style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Current Year: First Year // 2024 – Present</div>
+                                </div>
+                                <div class="score-badge">
+                                    <span>CGPA: </span>
+                                    <span class="counter-val text-gradient-cyan" data-target="9.5">9.5</span>
+                                    <span> / 10.0</span>
+                                </div>
+                            </div>
+                            <p class="timeline-details">
+                                Building foundational depth in Engineering Mechanics, CAD Modelling, Material Science, Manufacturing Processes, and Applied Mathematics. Actively applying engineering theories to practical automotive 3D projects and design conclaves.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Class 12th -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="degree-title">Senior Secondary (Class 12th)</h3>
+                                    <div class="institution-name">Archna Children's Academy, Jaipur</div>
+                                    <div class="mono" style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Science Stream (PCM) // Academic Distinction</div>
+                                </div>
+                                <div class="score-badge">
+                                    <span>Score: </span>
+                                    <span class="counter-val text-gradient-cyan" data-target="93" data-suffix="%">93%</span>
+                                </div>
+                            </div>
+                            <p class="timeline-details">
+                                Graduated with high distinction in Physics, Chemistry, and Mathematics. Honed analytical thinking and scientific problem-solving methods alongside digital design and creative arts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Class 10th -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="degree-title">Secondary Education (Class 10th)</h3>
+                                    <div class="institution-name">Phoenix Public School, Jodhpur</div>
+                                    <div class="mono" style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Foundational Academics &amp; Athletics</div>
+                                </div>
+                                <div class="score-badge">
+                                    <span>Score: </span>
+                                    <span class="counter-val text-gradient-cyan" data-target="92" data-suffix="%">92%</span>
+                                </div>
+                            </div>
+                            <p class="timeline-details">
+                                Excelled with 92% marks across mathematics, sciences, and humanities while demonstrating athletic discipline at inter-school and district competitions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             4. ACHIEVEMENTS SECTION
+             ========================================================================== -->
+        <section class="section" id="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">HONORS &amp; RECOGNITION</span>
+                    <h2 class="section-title">Key Achievements</h2>
+                    <p class="section-subtitle">Excellence earned through creative dedication, automotive design passion, and athletic grit.</p>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Achievement 1: Gold Medalist - Graphic Design -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrap" style="background: rgba(255, 183, 0, 0.1); border-color: rgba(255, 183, 0, 0.3);">
+                            🏅
+                        </div>
+                        <h3 class="achievement-title">Gold Medalist – Graphic Design</h3>
+                        <p class="achievement-desc">
+                            Awarded 1st Place Gold Medal for exceptional visual identity architecture, editorial layouts, and high-impact digital graphics.
+                        </p>
+                        <span class="achievement-badge">FIRST PRIZE // GOLD</span>
+                    </div>
+
+                    <!-- Achievement 2: Editing Professional -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrap" style="background: rgba(157, 78, 221, 0.1); border-color: rgba(157, 78, 221, 0.3);">
+                            🎨
+                        </div>
+                        <h3 class="achievement-title">Editing Professional</h3>
+                        <p class="achievement-desc">
+                            Specialized in cinematic video pacing, frame-accurate motion design, beat synchronization, and advanced color grading workflows.
+                        </p>
+                        <span class="achievement-badge">MOTION &amp; POST-PRODUCTION</span>
+                    </div>
+
+                    <!-- Achievement 3: Automobile Modelling -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrap" style="background: rgba(0, 240, 255, 0.1); border-color: rgba(0, 240, 255, 0.3);">
+                            🚗
+                        </div>
+                        <h3 class="achievement-title">Automobile Modelling</h3>
+                        <p class="achievement-desc">
+                            Expertise in conceptual vehicle design, aerodynamic surface synthesis, CAD assemblies, and realistic automotive visualization.
+                        </p>
+                        <span class="achievement-badge">3D VEHICLE DESIGN</span>
+                    </div>
+
+                    <!-- Achievement 4: Athletics - District Level -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrap" style="background: rgba(255, 85, 0, 0.1); border-color: rgba(255, 85, 0, 0.3);">
+                            🏃
+                        </div>
+                        <h3 class="achievement-title">Athletics – District Level</h3>
+                        <p class="achievement-desc">
+                            District-level competitor demonstrating speed, endurance, mental fortitude, teamwork, and high-performance physical discipline.
+                        </p>
+                        <span class="achievement-badge">DISTRICT LEVEL COMPETITOR</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             5. SKILLS SECTION
+             ========================================================================== -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">COMPETENCIES MATRIX</span>
+                    <h2 class="section-title">Technical &amp; Creative Skills</h2>
+                    <p class="section-subtitle">A balanced fusion of rigorous mechanical engineering theory, digital design craft, and collaborative execution.</p>
+                </div>
+
+                <div class="skills-layout">
+                    <!-- Category 1: Mechanical & Automotive -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <span class="category-icon">⚙️</span>
+                            <h3 class="category-title">Mechanical &amp; Automotive</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Mechanical Engineering Fundamentals</span>
+                                <span class="skill-tag">Core Discipline</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Automobile Modelling</span>
+                                <span class="skill-tag">Vehicle Design</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">3D Modelling</span>
+                                <span class="skill-tag">Surfacing &amp; Mesh</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Engineering Drawing</span>
+                                <span class="skill-tag">Drafting &amp; GD&amp;T</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">CAD / Design Skills</span>
+                                <span class="skill-tag">Parametric Modeling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Digital Design & Media -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <span class="category-icon">🎨</span>
+                            <h3 class="category-title">Design &amp; Visual Media</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Graphic Design</span>
+                                <span class="skill-tag">Gold Medalist</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Video/Image Editing</span>
+                                <span class="skill-tag">Professional</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Creative Design</span>
+                                <span class="skill-tag">Aesthetic Direction</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Visual Storytelling</span>
+                                <span class="skill-tag">Cinematic Pacing</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Color Grading &amp; Motion</span>
+                                <span class="skill-tag">Post-Production</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Mindset & Professional -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <span class="category-icon">💡</span>
+                            <h3 class="category-title">Engineering Mindset</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Problem Solving</span>
+                                <span class="skill-tag">Analytical</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Teamwork</span>
+                                <span class="skill-tag">Collaborative</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Communication</span>
+                                <span class="skill-tag">Technical Presentation</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Time Management</span>
+                                <span class="skill-tag">Execution Focus</span>
+                            </div>
+                            <div class="skill-pill-card">
+                                <span class="skill-name">Continuous Learning</span>
+                                <span class="skill-tag">Rapid Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             6. INTERESTS SECTION
+             ========================================================================== -->
+        <section class="section" id="interests">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">PASSIONS &amp; FOCUS</span>
+                    <h2 class="section-title">My Interests</h2>
+                    <p class="section-subtitle">The driving forces that inspire my engineering exploration, creativity, and personal discipline.</p>
+                </div>
+
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <span class="interest-icon">🚗</span>
+                        <h3 class="interest-title">Automobiles</h3>
+                        <p class="interest-desc">Vehicle dynamics, hypercars, aerodynamic styling, powertrain efficiency, and the future of mobility.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <span class="interest-icon">⚙️</span>
+                        <h3 class="interest-title">Mechanical Engineering</h3>
+                        <p class="interest-desc">Kinematics, thermodynamics, mechanism synthesis, materials, and precision manufacturing.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <span class="interest-icon">🎨</span>
+                        <h3 class="interest-title">Graphic Design</h3>
+                        <p class="interest-desc">Minimalist typography, automotive livery, brand identities, and futuristic technical aesthetics.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <span class="interest-icon">🎬</span>
+                        <h3 class="interest-title">Editing</h3>
+                        <p class="interest-desc">Dynamic motion graphics, cinematic color science, beat-synced pacing, and high-energy video reels.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <span class="interest-icon">🧩</span>
+                        <h3 class="interest-title">3D Modelling</h3>
+                        <p class="interest-desc">NURBS surfacing, parametric assemblies, realistic material shaders, and product rendering.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <span class="interest-icon">🏃</span>
+                        <h3 class="interest-title">Athletics</h3>
+                        <p class="interest-desc">Track sprinting, physical endurance, competitive focus, mental resilience, and peak discipline.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <span class="interest-icon">💡</span>
+                        <h3 class="interest-title">Innovation &amp; Technology</h3>
+                        <p class="interest-desc">Next-generation engineering software, smart materials, AI in CAD design, and automation.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <span class="interest-icon">🔧</span>
+                        <h3 class="interest-title">Engineering Projects</h3>
+                        <p class="interest-desc">Hands-on prototyping, mechanism fabrication, physical testing, and cross-functional design builds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             7. PROJECTS SECTION
+             ========================================================================== -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">ENGINEERING PORTFOLIO</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">A showcase of automobile modelling, mechanical mechanism design, 3D visualizations, and award-winning creative media.</p>
+                </div>
+
+                <!-- Category Filter Tabs -->
+                <div class="projects-filter-bar">
+                    <button class="filter-btn active" data-filter="all">All Projects (6)</button>
+                    <button class="filter-btn" data-filter="automotive">Automobile &amp; Mechanical</button>
+                    <button class="filter-btn" data-filter="3d">3D Modelling &amp; CAD</button>
+                    <button class="filter-btn" data-filter="creative">Graphic Design &amp; Editing</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: Supercar Concept -->
+                    <div class="project-card" data-category="automotive 3d">
+                        <div class="project-thumb-wrap">
+                            <img src="assets/images/project-supercar.svg" alt="Apex-GT Aerodynamic Hypercar Concept" class="project-thumb">
+                            <span class="project-badge">AUTOMOBILE MODELLING</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Apex-GT Aerodynamic Hypercar Concept</h3>
+                            <p class="project-summary">Full-scale aerodynamic surface modelling and computational design for a high-performance track-focused hypercar with active downforce aero.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">SolidWorks</span>
+                                <span class="tech-tag">Blender 3D</span>
+                                <span class="tech-tag">Class-A Surfacing</span>
+                                <span class="tech-tag">Aerodynamics</span>
+                            </div>
+                            <button class="btn-view-project" data-project="p1">
+                                <span>View Technical Details</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Mechanical Gearbox -->
+                    <div class="project-card" data-category="automotive">
+                        <div class="project-thumb-wrap">
+                            <img src="assets/images/project-gearbox.svg" alt="Twin-Spur Mechanical Gearbox & Differential" class="project-thumb">
+                            <span class="project-badge">MECHANICAL KINEMATICS</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Twin-Spur Mechanical Gearbox &amp; Differential</h3>
+                            <p class="project-summary">Kinematic transmission simulation, involute tooth profile synthesis, and gear ratio optimization achieving 98.4% mechanical efficiency.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Engineering Mechanics</span>
+                                <span class="tech-tag">Kinematics</span>
+                                <span class="tech-tag">CAD Modeling</span>
+                                <span class="tech-tag">Gear Synthesis</span>
+                            </div>
+                            <button class="btn-view-project" data-project="p2">
+                                <span>View Technical Details</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: V8 Engine Assembly -->
+                    <div class="project-card" data-category="automotive 3d">
+                        <div class="project-thumb-wrap">
+                            <img src="assets/images/project-engine.svg" alt="High-Poly V8 Twin-Turbo Engine Assembly" class="project-thumb">
+                            <span class="project-badge">3D MODELLING &amp; CAD</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">High-Poly V8 Twin-Turbo Engine Assembly</h3>
+                            <p class="project-summary">Complex parametric 3D assembly of an internal combustion power unit featuring twin turbochargers, dry sump, and intake runners.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">3D CAD</span>
+                                <span class="tech-tag">Parametric Assembly</span>
+                                <span class="tech-tag">Blender</span>
+                                <span class="tech-tag">Engine Dynamics</span>
+                            </div>
+                            <button class="btn-view-project" data-project="p3">
+                                <span>View Technical Details</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Gold Medal Graphic Design -->
+                    <div class="project-card" data-category="creative">
+                        <div class="project-thumb-wrap">
+                            <img src="assets/images/project-branding.svg" alt="Velocity Brand Identity Architecture" class="project-thumb">
+                            <span class="project-badge" style="color: #ffd700; border-color: rgba(255, 215, 0, 0.4);">🏅 GOLD MEDAL PROJECT</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Velocity Automotive Brand Identity System</h3>
+                            <p class="project-summary">Award-winning visual identity, typography system, livery design, and editorial brand architecture honored with 1st Place Gold Medal.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Adobe Illustrator</span>
+                                <span class="tech-tag">Photoshop</span>
+                                <span class="tech-tag">Typography</span>
+                                <span class="tech-tag">Brand Strategy</span>
+                            </div>
+                            <button class="btn-view-project" data-project="p4">
+                                <span>View Technical Details</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Cinematic Video Editing -->
+                    <div class="project-card" data-category="creative">
+                        <div class="project-thumb-wrap">
+                            <img src="assets/images/project-editing.svg" alt="Cinematic Automotive Showcase & Motion Reel" class="project-thumb">
+                            <span class="project-badge" style="color: #c084fc; border-color: rgba(192, 132, 252, 0.4);">EDITING PROFESSIONAL</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Cinematic Automotive Showcase &amp; Motion Reel</h3>
+                            <p class="project-summary">High-energy cinematic automotive reel combining dynamic speed ramps, sound design, telemetry HUD graphics, and color grading.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Premiere Pro</span>
+                                <span class="tech-tag">After Effects</span>
+                                <span class="tech-tag">Color Grading</span>
+                                <span class="tech-tag">Sound Design</span>
+                            </div>
+                            <button class="btn-view-project" data-project="p5">
+                                <span>View Technical Details</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Aerodynamics CFD -->
+                    <div class="project-card" data-category="automotive 3d">
+                        <div class="project-thumb-wrap">
+                            <img src="assets/images/project-aerodynamics.svg" alt="Formula Student Aerofoil & Downforce Assembly" class="project-thumb">
+                            <span class="project-badge">AERODYNAMICS &amp; CFD</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Formula Student Aerofoil &amp; Downforce Assembly</h3>
+                            <p class="project-summary">Multi-element front wing aerodynamic study producing 680 N downforce at 100 km/h with ground effect suction optimization.</p>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Aerodynamics</span>
+                                <span class="tech-tag">CFD Simulation</span>
+                                <span class="tech-tag">Engineering Drawing</span>
+                                <span class="tech-tag">Carbon Fiber</span>
+                            </div>
+                            <button class="btn-view-project" data-project="p6">
+                                <span>View Technical Details</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             8. INTERACTIVE 3D AUTOMOBILE SECTION (HIGHLIGHT SHOWPIECE)
+             ========================================================================== -->
+        <section class="section car-3d-section" id="car3d">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">REAL-TIME WEBGL RENDERING</span>
+                    <h2 class="section-title">Explore My 3D Automobile Model</h2>
+                    <p class="section-subtitle">
+                        An interactive 3D procedural supercar model engineered with realistic metallic clearcoat shaders, active aerodynamics, Brembo brakes, and interactive technical callouts. Drag to rotate 360°, scroll to zoom.
+                    </p>
+                </div>
+
+                <!-- 3D Viewport Box -->
+                <div class="car-viewer-container" id="car-viewer-container">
+                    <!-- CAD HUD Corners -->
+                    <div class="hud-corner hud-tl" aria-hidden="true"></div>
+                    <div class="hud-corner hud-tr" aria-hidden="true"></div>
+                    <div class="hud-corner hud-bl" aria-hidden="true"></div>
+                    <div class="hud-corner hud-br" aria-hidden="true"></div>
+
+                    <!-- Telemetry & Instructions -->
+                    <div class="hud-telemetry-status">
+                        <span>SYS: APEX-GT // 3D CAD ENGINE ACTIVE</span>
+                    </div>
+
+                    <div class="hud-instructions">
+                        <span>LEFT CLICK + DRAG: ROTATE</span>
+                        <span>SCROLL: ZOOM</span>
+                        <span>RIGHT CLICK + DRAG: PAN</span>
+                    </div>
+
+                    <!-- WebGL Canvas Mount Container -->
+                    <div id="main-car-viewport"></div>
+
+                    <!-- Dynamic Inspection Card -->
+                    <div class="inspection-card" id="inspection-card" role="region" aria-label="Component Inspection Details">
+                        <div class="inspection-header">
+                            <span class="inspection-tag" id="inspection-tag">COMPONENT TELEMETRY</span>
+                            <button class="inspection-close" id="close-inspection-card" aria-label="Close component inspection card">✕</button>
+                        </div>
+                        <h4 class="inspection-title" id="inspection-title">Component Name</h4>
+                        <p class="inspection-desc" id="inspection-desc">Select any component marker to review engineering specs.</p>
+                    </div>
+                </div>
+
+                <!-- 3D Model Control Toolbar -->
+                <div class="car-controls-toolbar">
+                    <!-- Car Paint Colors -->
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Finish:</span>
+                        <div class="color-swatches-wrap">
+                            <button class="color-swatch-btn active" data-color="0x00d4ff" style="background: #00d4ff;" title="Cyber Cyan" aria-label="Cyber Cyan paint"></button>
+                            <button class="color-swatch-btn" data-color="0xe60026" style="background: #e60026;" title="Apex Red" aria-label="Apex Red paint"></button>
+                            <button class="color-swatch-btn" data-color="0x0052cc" style="background: #0052cc;" title="Monaco Blue" aria-label="Monaco Blue paint"></button>
+                            <button class="color-swatch-btn" data-color="0x111317" style="background: #111317;" title="Obsidian Black" aria-label="Obsidian Black paint"></button>
+                            <button class="color-swatch-btn" data-color="0xffb700" style="background: #ffb700;" title="Solar Gold" aria-label="Solar Gold paint"></button>
+                            <button class="color-swatch-btn" data-color="0x00a86b" style="background: #00a86b;" title="Racing Green" aria-label="Racing Green paint"></button>
+                            <button class="color-swatch-btn" data-color="0x8fa0b5" style="background: #8fa0b5;" title="Titanium Silver" aria-label="Titanium Silver paint"></button>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Toggles -->
+                    <div class="toolbar-group">
+                        <button class="tool-btn" id="btn-toggle-wireframe" title="Toggle CAD Blueprint Wireframe" aria-pressed="false">
+                            <span>📐</span>
+                            <span>CAD WIREFRAME</span>
+                        </button>
+
+                        <button class="tool-btn active" id="btn-toggle-headlights" title="Toggle LED Headlights" aria-pressed="true">
+                            <span>💡</span>
+                            <span>HEADLIGHTS</span>
+                        </button>
+
+                        <button class="tool-btn active" id="btn-toggle-underglow" title="Toggle Neon Underglow" aria-pressed="true">
+                            <span>✨</span>
+                            <span>UNDERGLOW</span>
+                        </button>
+
+                        <button class="tool-btn" id="btn-toggle-rotate" title="Toggle Turntable Auto Rotate" aria-pressed="false">
+                            <span>🔄</span>
+                            <span>TURNTABLE</span>
+                        </button>
+
+                        <button class="tool-btn tool-btn-orange" id="btn-engine-rev" title="Rev Twin-Turbo V8 Engine">
+                            <span>🔊</span>
+                            <span>REV ENGINE</span>
+                        </button>
+
+                        <button class="tool-btn" id="btn-reset-camera" title="Reset Camera View">
+                            <span>🎯</span>
+                            <span>RESET VIEW</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hotspot Quick Jump Buttons -->
+                <div>
+                    <span class="mono" style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-bottom: 0.4rem;">
+                        INSPECT AUTOMOBILE COMPONENTS:
+                    </span>
+                    <div class="hotspots-quick-nav">
+                        <button class="hotspot-nav-btn" data-hotspot="splitter">1. Front Carbon Splitter</button>
+                        <button class="hotspot-nav-btn" data-hotspot="brakes">2. Carbon-Ceramic Brakes</button>
+                        <button class="hotspot-nav-btn" data-hotspot="cockpit">3. Monocoque Cockpit</button>
+                        <button class="hotspot-nav-btn" data-hotspot="engine">4. Twin-Turbo V8 Bay</button>
+                        <button class="hotspot-nav-btn" data-hotspot="spoiler">5. Active DRS Aero Wing</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             9. CONTACT SECTION
+             ========================================================================== -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h2 class="section-title">Contact &amp; Collaboration</h2>
+                    <p class="section-subtitle">Interested in engineering projects, automotive collaborations, internships, or creative design? Let's connect.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left Contact Info Card -->
+                    <div class="contact-info-card">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Let's Build Something Exceptional</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                            Feel free to reach out directly via email or LinkedIn. I am always open to discussing mechanical engineering research, CAD projects, graphic design briefs, and automotive innovations.
+                        </p>
+
+                        <div class="contact-methods">
+                            <!-- Email Item -->
+                            <div class="contact-method-item">
+                                <div class="contact-method-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <div class="contact-method-content">
+                                    <div class="contact-method-label">Official Email</div>
+                                    <a href="mailto:guru92256@gmail.com" class="contact-method-val">guru92256@gmail.com</a>
+                                    <br>
+                                    <button class="copy-btn" id="copy-email-btn" title="Copy email address to clipboard">
+                                        <span class="icon">📋</span> COPY EMAIL
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn Item (Configured directly to Shivraj's profile) -->
+                            <div class="contact-method-item">
+                                <div class="contact-method-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                                </div>
+                                <div class="contact-method-content">
+                                    <div class="contact-method-label">LinkedIn Profile</div>
+                                    <a href="https://www.linkedin.com/in/shivraj-chouhan-718736429?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                                       target="_blank" rel="noopener noreferrer" class="contact-method-val">
+                                        Shivraj Chouhan on LinkedIn ↗
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Academic Base Item -->
+                            <div class="contact-method-item">
+                                <div class="contact-method-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </div>
+                                <div class="contact-method-content">
+                                    <div class="contact-method-label">Academic University Base</div>
+                                    <div style="color: #ffffff; font-weight: 500; font-size: 0.95rem;">JECRC University</div>
+                                    <div style="color: var(--text-muted); font-size: 0.85rem;">Jaipur, Rajasthan, India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Interactive Contact Form -->
+                    <div class="contact-form-card">
+                        <form id="portfolio-contact-form">
+                            <div class="form-group">
+                                <label for="contact-name" class="form-label">Your Name</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Henderson" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email" class="form-label">Email Address</label>
+                                <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-subject" class="form-label">Subject</label>
+                                <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Engineering Project Inquiry / Internship" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message" class="form-label">Message</label>
+                                <textarea id="contact-message" class="form-textarea" placeholder="Describe your inquiry, project requirements, or opportunity..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <span>Send Message</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         14. FOOTER
+         ========================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Bio & Passion line -->
+                <div>
+                    <div class="footer-name">Shivraj Singh Chouhan</div>
+                    <div class="footer-designation">First-Year Mechanical Engineering Student</div>
+                    <div class="footer-uni">JECRC University, Jaipur, Rajasthan</div>
+                    <p class="footer-quote">
+                        "Designed &amp; Built with passion for Engineering, Design &amp; Automobiles."
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <div class="footer-col-title">NAVIGATION</div>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About Me</a></li>
+                        <li><a href="#education" class="footer-link">Education (9.5 CGPA)</a></li>
+                        <li><a href="#achievements" class="footer-link">Achievements</a></li>
+                        <li><a href="#skills" class="footer-link">Skills &amp; CAD</a></li>
+                        <li><a href="#projects" class="footer-link">Featured Projects</a></li>
+                        <li><a href="#car3d" class="footer-link">Interactive 3D Automobile</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Direct Connect -->
+                <div>
+                    <div class="footer-col-title">DIRECT CONNECT</div>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="mailto:guru92256@gmail.com" class="footer-link">
+                                ✉️ guru92256@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/shivraj-chouhan-718736429?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                               target="_blank" rel="noopener noreferrer" class="footer-link">
+                                💼 LinkedIn Profile ↗
+                            </a>
+                        </li>
+                        <li style="margin-top: 0.8rem;">
+                            <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan);">
+                                ACADEMIC BASE: JAIPUR, RAJASTHAN
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Shivraj Singh Chouhan. All rights reserved. Mechanical Engineering &amp; Automotive Design Portfolio.
+                </div>
+                <div class="mono" style="font-size: 0.75rem; color: var(--accent-cyan);">
+                    STATUS: FIRST YEAR B.TECH ME // CGPA 9.5
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         PROJECT DETAILS MODAL
+         ========================================================================== -->
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Modal">✕</button>
+            
+            <div style="margin-bottom: 1.25rem;">
+                <span class="section-tag" id="modal-badge">PROJECT SCHEMATICS</span>
+                <h3 id="modal-title" style="font-size: 1.8rem; margin-top: 0.4rem; color: #ffffff;">Project Title</h3>
+            </div>
+
+            <div class="modal-img-wrap">
+                <img id="modal-img" src="" alt="Project schematic view">
+            </div>
+
+            <div class="modal-metrics-grid" id="modal-metrics">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 0.5rem;">Project Overview</h4>
+                <p id="modal-overview" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;"></p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 0.5rem;">Key Engineering &amp; Design Highlights</h4>
+                <ul class="modal-highlights-list" id="modal-highlights">
+                    <!-- Injected via JavaScript -->
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 0.5rem;">Tools &amp; Technologies Used</h4>
+                <div class="project-tech-tags" id="modal-tools">
+                    <!-- Injected via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts: Three.js and OrbitControls via Rock-Solid High Speed CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- Local App Modules -->
+    <script src="js/audio.js"></script>
+    <script src="js/car3d.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
